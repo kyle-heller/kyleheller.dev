@@ -61,7 +61,7 @@ menu:
       weight: 40
     - identifier: blog
       name: Blog
-      url: https://blog.kyleheller.dev/
+      url: "#blog"
       weight: 50
 
 outputs:

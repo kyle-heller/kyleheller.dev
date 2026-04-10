@@ -1,0 +1,59 @@
+{{- /* Blog slide-over drawer panel */ -}}
+<div id="blog-backdrop" class="blog-backdrop"></div>
+<div id="blog-drawer" class="blog-drawer">
+  <div class="blog-drawer-header">
+    <span class="blog-drawer-title">Blog</span>
+    <button id="blog-drawer-close" class="blog-drawer-close" aria-label="Close blog panel">&times;</button>
+  </div>
+  <iframe id="blog-iframe" class="blog-drawer-iframe" title="Blog" allow="autoplay"></iframe>
+</div>
+
+<script>
+(function () {
+  const backdrop = document.getElementById('blog-backdrop');
+  const drawer = document.getElementById('blog-drawer');
+  const iframe = document.getElementById('blog-iframe');
+  const closeBtn = document.getElementById('blog-drawer-close');
+  const blogUrl = 'https://blog.kyleheller.dev/';
+  let loaded = false;
+
+  function open() {
+    if (!loaded) {
+      iframe.src = blogUrl;
+      loaded = true;
+    }
+    drawer.classList.add('open');
+    backdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    drawer.classList.remove('open');
+    backdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Intercept Blog nav link
+  document.querySelectorAll('#menu a').forEach(function (link) {
+    if (link.getAttribute('href') === '#blog') {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (drawer.classList.contains('open')) {
+          close();
+        } else {
+          open();
+        }
+      });
+    }
+  });
+
+  closeBtn.addEventListener('click', close);
+  backdrop.addEventListener('click', close);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) {
+      close();
+    }
+  });
+})();
+</script>
