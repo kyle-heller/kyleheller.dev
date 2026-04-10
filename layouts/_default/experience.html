@@ -1,0 +1,61 @@
+{{ define "main" }}
+<article>
+  <header class="entry-header">
+    <h1>{{ .Title }}</h1>
+  </header>
+  <div class="entry-content">
+
+    <div class="experience-list">
+
+      <div class="experience-card">
+        <div class="experience-header">
+          <div>
+            <h2>Kubernetes Platform Engineer</h2>
+            <p class="experience-company">Nationwide — Columbus, OH</p>
+          </div>
+          <span class="experience-date">May 2026 – Present</span>
+        </div>
+        <ul class="experience-details">
+          <li>Platform engineer on the Application and Database Platforms team, operating production EKS clusters on AWS supporting enterprise financial services workloads in a regulated environment.</li>
+          <li>Kubernetes cluster operations including upgrades, node group management, Cilium CNI networking, pod security enforcement, and Gatekeeper policy development for compliance-driven workloads.</li>
+          <li>Developed internal platform tooling and automation using Python and Bash to streamline operational workflows, improve deployment reliability, and reduce manual toil across the platform engineering lifecycle.</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <div class="experience-header">
+          <div>
+            <h2>Technical Lead</h2>
+            <p class="experience-company">Veeam Software — Columbus, OH</p>
+          </div>
+          <span class="experience-date">Jul 2022 – Apr 2026</span>
+        </div>
+        <ul class="experience-details">
+          <li>Led an 8-person engineering team supporting enterprise cloud infrastructure across multi-tenant environments; served as senior technical escalation point for complex issues spanning compute, storage, networking, and application layers.</li>
+          <li>Built end-to-end automation for compliance reporting using n8n, Python, Puppeteer, and Claude API integration, reducing a 2–3 hour manual workflow to ~15 minutes and eliminating data accuracy issues.</li>
+          <li>Conducted technical assessments of partner environments, identifying configuration risks and recommending architectural improvements tied to security, business continuity, and cost optimization.</li>
+          <li>Served as cross-functional liaison between engineering, R&D, and QA teams, delivering structured root cause analysis with reproducible evidence to accelerate product fixes and improve system reliability.</li>
+          <li>Mentored a team of 10 engineers on troubleshooting methodology, technical analysis, and knowledge management; established standardized operational playbooks and diagnostic workflows as Knowledge Domain Expert.</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <div class="experience-header">
+          <div>
+            <h2>Cloud Infrastructure Engineer</h2>
+            <p class="experience-company">Veeam Software — Columbus, OH</p>
+          </div>
+          <span class="experience-date">Jan 2019 – Jul 2022</span>
+        </div>
+        <ul class="experience-details">
+          <li>Managed production cloud infrastructure for enterprise partners running BaaS and DRaaS environments; diagnosed and resolved failures across backup, replication, storage, and network layers to minimize downtime and data loss risk.</li>
+          <li>Led solution design, migration planning, and infrastructure upgrades for enterprise partners; provided hands-on implementation for cloud platform configuration, multi-tenant onboarding, and environment deployments.</li>
+          <li>Performed structured infrastructure analysis and environment reviews; translated complex technical findings into actionable recommendations for engineering and management stakeholders.</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</article>
+{{ end }}

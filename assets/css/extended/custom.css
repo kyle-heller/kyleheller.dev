@@ -1,76 +1,229 @@
-/* Skills grid on home page */
+/* ========================================
+   Hero section
+   ======================================== */
+.hero {
+  text-align: center;
+  padding: 3rem 0 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--secondary);
+  margin: 0.3rem 0 0;
+  font-weight: 500;
+}
+
+.hero-location {
+  font-size: 0.95rem;
+  color: var(--secondary);
+  margin: 0.2rem 0 1rem;
+  opacity: 0.7;
+}
+
+.hero-social .social-icons {
+  justify-content: center;
+}
+
+/* ========================================
+   Summary section
+   ======================================== */
+.summary-section {
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  padding: 0 var(--gap);
+}
+
+.summary-section p {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--secondary);
+  margin-bottom: 0.8rem;
+}
+
+/* ========================================
+   Skills grid
+   ======================================== */
 .skills-section {
-  margin-top: 2rem;
+  margin: 0 auto 2rem;
   padding: 0 var(--gap);
 }
 
 .skills-section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--border);
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0.8rem;
 }
 
 .skill-category {
   background: var(--code-bg);
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 1rem 1.2rem;
+  border-left: 3px solid var(--secondary);
 }
 
 .skill-category h3 {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   color: var(--secondary);
   margin: 0 0 0.4rem 0;
+  font-weight: 600;
 }
 
 .skill-category p {
   margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--primary);
+}
+
+/* ========================================
+   Experience cards
+   ======================================== */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experience-card {
+  background: var(--code-bg);
+  border-radius: 6px;
+  padding: 1.5rem 1.8rem;
+  border-left: 3px solid var(--secondary);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.experience-header h2 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.experience-company {
+  margin: 0.2rem 0 0;
+  color: var(--secondary);
   font-size: 0.95rem;
 }
 
-/* Project cards */
+.experience-date {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  white-space: nowrap;
+  font-weight: 500;
+  opacity: 0.8;
+  padding-top: 0.2rem;
+}
+
+.experience-details {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.experience-details li {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--secondary);
+  margin-bottom: 0.6rem;
+}
+
+.experience-details li:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   Project cards
+   ======================================== */
 .projects-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .project-card {
   background: var(--code-bg);
-  border-radius: 8px;
-  padding: 1.5rem;
+  border-radius: 6px;
+  padding: 1.5rem 1.8rem;
+  border-left: 3px solid var(--secondary);
 }
 
-.project-card h2 {
-  margin-top: 0;
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.project-header h2 {
+  margin: 0;
   font-size: 1.3rem;
-}
-
-.project-card p {
-  color: var(--secondary);
-  line-height: 1.6;
 }
 
 .project-links {
   display: flex;
   gap: 1rem;
-  margin: 0.8rem 0;
 }
 
 .project-links a {
-  color: var(--primary);
+  color: var(--secondary);
+  font-size: 0.85rem;
   font-weight: 500;
   text-decoration: none;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: color 0.15s, border-color 0.15s;
 }
 
 .project-links a:hover {
-  text-decoration: underline;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.project-stack {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  margin: 0.3rem 0 0.8rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.project-details {
+  margin: 0 0 1rem;
+  padding-left: 1.2rem;
+}
+
+.project-details li {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+.project-details li:last-child {
+  margin-bottom: 0;
 }
 
 .project-tags {
@@ -84,39 +237,65 @@
   color: var(--primary);
   padding: 0.2rem 0.6rem;
   border-radius: 4px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 
-/* Certifications list */
+/* ========================================
+   Certifications list
+   ======================================== */
 .cert-list {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .cert-item {
   display: flex;
   align-items: baseline;
-  gap: 1rem;
-  padding: 0.6rem 0;
+  gap: 1.2rem;
+  padding: 0.7rem 0;
   border-bottom: 1px solid var(--border);
+}
+
+.cert-item:last-child {
+  border-bottom: none;
 }
 
 .cert-year {
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--secondary);
   min-width: 3.5rem;
   flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.cert-info {
+  display: flex;
+  flex-direction: column;
 }
 
 .cert-name {
   font-size: 1rem;
+  font-weight: 500;
 }
 
-/* Home info tweaks */
-.home-info .entry-content {
-  font-size: 1.05rem;
-  line-height: 1.7;
+.cert-detail {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  opacity: 0.7;
+  margin-top: 0.1rem;
+}
+
+/* Section headings on certifications page */
+.entry-content h2 {
+  font-size: 1.2rem;
+  margin: 2rem 0 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.entry-content h2:first-child {
+  margin-top: 0;
 }

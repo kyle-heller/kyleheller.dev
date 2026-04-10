@@ -13,20 +13,11 @@ params:
   showPostNavLinks: true
   showBreadCrumbs: true
   showCodeCopyButtons: true
-  showToc: true
+  showToc: false
 
   homeInfoParams:
     Title: "Kyle Heller"
-    Content: >
-      **Kubernetes Platform Engineer** · Columbus, OH
-
-
-      I'm a Kubernetes Platform Engineer at Nationwide, building and operating production-grade
-      cloud native platforms on AWS EKS — infrastructure-as-code with Terraform, GitOps delivery
-      with ArgoCD, policy enforcement with OPA Gatekeeper, and observability with Prometheus.
-      Before this, I spent seven years as a Technical Lead at Veeam Software. I've seen a lot
-      of what breaks. I hold an M.S. in Computer Science from the University of Colorado Boulder,
-      with graduate certificates in Data Science and AI.
+    Content: ""
 
   socialIcons:
     - name: linkedin
@@ -47,9 +38,9 @@ menu:
       name: Home
       url: /
       weight: 10
-    - identifier: blog
-      name: Blog
-      url: https://blog.kyleheller.dev/
+    - identifier: experience
+      name: Experience
+      url: /experience/
       weight: 20
     - identifier: projects
       name: Projects
@@ -59,6 +50,10 @@ menu:
       name: Certifications
       url: /certifications/
       weight: 40
+    - identifier: blog
+      name: Blog
+      url: https://blog.kyleheller.dev/
+      weight: 50
 
 outputs:
   home:

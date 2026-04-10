@@ -1,45 +1,65 @@
 {{ define "main" }}
 <div class="home-content">
-  <!-- Bio section (handled by PaperMod homeInfoParams) -->
-  {{- if .Site.Params.homeInfoParams }}
-  <article class="first-entry home-info">
-    <header class="entry-header">
-      <h1>{{ .Site.Params.homeInfoParams.Title }}</h1>
-    </header>
-    <div class="entry-content">
-      {{ .Site.Params.homeInfoParams.Content | markdownify }}
-    </div>
-    <footer class="entry-footer">
-      {{- partial "social_icons.html" (dict "align" "") }}
-    </footer>
-  </article>
-  {{- end }}
 
-  <!-- Skills section -->
-  <div class="skills-section">
-    <h2>Skills</h2>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Kyle Heller</h1>
+    <p class="hero-subtitle">Kubernetes Platform Engineer</p>
+    <p class="hero-location">Columbus, OH</p>
+    <div class="hero-social">
+      {{- partial "social_icons.html" (dict "align" "") }}
+    </div>
+  </section>
+
+  <!-- Summary -->
+  <section class="summary-section">
+    <p>
+      Platform engineer with 8+ years in enterprise cloud environments, currently operating production
+      Kubernetes on AWS EKS at a Fortune 75 financial services company. Background spanning platform
+      operations, infrastructure automation, and technical leadership across multi-tenant cloud environments.
+    </p>
+    <p>
+      Hands-on with Kubernetes cluster operations, Helm, ArgoCD, Cilium, observability
+      (Prometheus/Grafana), policy enforcement (OPA/Gatekeeper), and container security in regulated
+      environments. Built internal tooling, automation pipelines, and self-service workflows using Python,
+      API integrations, and workflow orchestration.
+    </p>
+    <p>
+      Certified Kubernetes Administrator, CNCF Kubestronaut, AWS Solutions Architect, Azure Solutions
+      Architect Expert, and HashiCorp Terraform Associate. M.S. Computer Science from CU Boulder.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills-section">
+    <h2>Technical Skills</h2>
     <div class="skills-grid">
       <div class="skill-category">
-        <h3>Cloud & Platform</h3>
-        <p>AWS · EKS · Kubernetes · Terraform · ArgoCD · Helm</p>
+        <h3>Cloud & Infrastructure</h3>
+        <p>AWS (EKS, EC2, IAM, S3, VPC, CloudWatch, RDS), Azure (AKS, Virtual Networks, Entra ID, Key Vault), Kubernetes, Docker, Terraform, Linux (RHEL, Ubuntu)</p>
       </div>
       <div class="skill-category">
-        <h3>Observability & Policy</h3>
-        <p>Prometheus · Grafana · OPA Gatekeeper · Cilium</p>
+        <h3>Platform & Orchestration</h3>
+        <p>Helm, Kustomize, ArgoCD, Cilium (CNI/network policy), Gateway API, Pod Security Standards, OPA/Gatekeeper, Veeam Kasten, namespace isolation, resource quotas</p>
       </div>
       <div class="skill-category">
-        <h3>Automation</h3>
-        <p>Python · Bash · GitHub Actions</p>
+        <h3>CI/CD & Automation</h3>
+        <p>GitHub Actions, Azure DevOps, ArgoCD (GitOps), Flux, Trivy, container image lifecycle, n8n</p>
       </div>
       <div class="skill-category">
-        <h3>Core Dev</h3>
-        <p>Python · Java/Spring · C#/.NET · SQL</p>
+        <h3>Development</h3>
+        <p>Python, Go, Bash, FastAPI, REST APIs, Rego (OPA), SQL, Java/Spring, C#/.NET</p>
       </div>
       <div class="skill-category">
-        <h3>Infrastructure</h3>
-        <p>Azure (AZ-104, AZ-305, AZ-400) · Docker · CI/CD Pipelines</p>
+        <h3>Observability</h3>
+        <p>Prometheus, Grafana, OpenTelemetry, ELK/EFK, CloudWatch, SLO/SLI frameworks, alerting design</p>
+      </div>
+      <div class="skill-category">
+        <h3>Security & Governance</h3>
+        <p>IAM/RBAC, OPA/Gatekeeper (custom Rego), Pod Security Admission, Falco, secrets management, default-deny network policies, container image scanning</p>
       </div>
     </div>
-  </div>
+  </section>
+
 </div>
 {{ end }}
