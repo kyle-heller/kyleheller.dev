@@ -14,12 +14,21 @@
           </div>
         </div>
         <p class="project-stack">Terraform + Kubernetes + ArgoCD + OPA Gatekeeper + Veeam Kasten</p>
-        <ul class="project-details">
-          <li>Terraform modules provisioning AKS clusters with configurable node pools, networking, RBAC, and remote state on Azure Storage; separate dev/prod environment configurations.</li>
-          <li>Veeam Kasten K10 backup policy with daily snapshots, 7/4/3 GFS retention, and automated export to Azure Blob via managed identity. OPA/Gatekeeper policy requiring StatefulSets to carry a <code>k10.kasten.io/backup</code> label, enforcing backup governance at the admission layer.</li>
-          <li>ArgoCD GitOps delivery with automated sync, self-heal for drift detection, and prune for removed resources. Application manifests managing Kasten infrastructure and app deployments from Git as source of truth.</li>
-          <li>Pod Security Standards (restricted profile), default-deny NetworkPolicies, Gateway API routing, Kustomize-based team onboarding with namespace isolation, resource quotas, RBAC bindings, and LimitRanges.</li>
-        </ul>
+
+        <div class="project-case-study">
+          <p class="case-study-section"><strong>Problem:</strong> Platform teams provisioning Kubernetes clusters manually end up with snowflake environments — inconsistent RBAC, no backup governance, and configuration drift between dev and prod.</p>
+
+          <p class="case-study-section"><strong>Approach:</strong> Built a production-ready starter kit that provisions AKS clusters via Terraform with ArgoCD handling all post-cluster configuration as GitOps. Every change — from namespace onboarding to backup policy — flows through Git. OPA/Gatekeeper enforces guardrails at the admission layer so teams can self-serve without bypassing security.</p>
+
+          <ul class="project-details">
+            <li>Terraform modules for AKS with configurable node pools, networking, RBAC, and remote state on Azure Storage; separate dev/prod environment configs</li>
+            <li>ArgoCD GitOps delivery with automated sync, self-heal for drift detection, and prune for removed resources</li>
+            <li>OPA/Gatekeeper policy requiring StatefulSets to carry a backup label, enforcing backup governance at admission</li>
+            <li>Kasten K10 backup with daily snapshots, 7/4/3 GFS retention, automated export to Azure Blob via managed identity</li>
+            <li>Pod Security Standards (restricted), default-deny NetworkPolicies, Gateway API routing, Kustomize-based team onboarding with namespace isolation, quotas, and LimitRanges</li>
+          </ul>
+        </div>
+
         <div class="project-tags">
           <span>Terraform</span>
           <span>Kubernetes</span>
@@ -39,11 +48,20 @@
           </div>
         </div>
         <p class="project-stack">FastAPI + Prometheus + Grafana + React/TypeScript</p>
-        <ul class="project-details">
-          <li>Full-stack uptime monitoring: FastAPI backend with PostgreSQL, React/TypeScript frontend, and background worker performing health checks. SLO engine computing availability (99.5% target) and latency (p95 &lt; 500ms) with error budget burn rate tracking.</li>
-          <li>Prometheus instrumentation with custom histograms, counters, and gauges; Grafana dashboards provisioned via JSON. Alerting rules for SLO breaches and burn rate using <code>histogram_quantile</code> and <code>rate</code> queries.</li>
-          <li>CI/CD via GitHub Actions: lint, test, build, push to GHCR, and Trivy container image scanning. Kubernetes manifests with Kustomization for cluster deployment.</li>
-        </ul>
+
+        <div class="project-case-study">
+          <p class="case-study-section"><strong>Problem:</strong> Simple uptime checks tell you a service is down but not whether you're burning through your error budget. Teams need SLO-driven monitoring with real-time visibility into availability and latency against defined targets.</p>
+
+          <p class="case-study-section"><strong>Approach:</strong> Built a full-stack monitoring platform with an SLO engine that computes availability (99.5% target) and latency (p95 < 500ms) from Prometheus metrics. Error budget burn rate tracking surfaces problems before SLO breach, not after. The entire stack deploys to Kubernetes with CI that includes container image scanning.</p>
+
+          <ul class="project-details">
+            <li>FastAPI backend with PostgreSQL, React/TypeScript frontend, and background worker performing health checks on configurable intervals</li>
+            <li>Custom Prometheus instrumentation — histograms, counters, gauges — with Grafana dashboards provisioned via JSON</li>
+            <li>Alerting rules for SLO breaches and burn rate using <code>histogram_quantile</code> and <code>rate</code> queries</li>
+            <li>CI/CD via GitHub Actions: lint, test, build, push to GHCR, and Trivy container image scanning</li>
+          </ul>
+        </div>
+
         <div class="project-tags">
           <span>FastAPI</span>
           <span>React</span>

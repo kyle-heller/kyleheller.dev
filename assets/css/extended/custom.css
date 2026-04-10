@@ -540,3 +540,54 @@
 [data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-dim);
 }
+
+/* ========================================
+   Case study sections in project cards
+   ======================================== */
+.project-case-study {
+  margin: 0.8rem 0;
+}
+
+.case-study-section {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--secondary);
+  margin-bottom: 0.6rem;
+}
+
+.case-study-section strong {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ========================================
+   Mobile responsive
+   ======================================== */
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-cta {
+    grid-template-columns: 1fr;
+  }
+}

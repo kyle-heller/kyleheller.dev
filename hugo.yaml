@@ -15,6 +15,17 @@ params:
   showCodeCopyButtons: true
   showToc: false
   description: "Platform engineer building Kubernetes platforms on AWS EKS. CKA, Azure Solutions Architect Expert, Terraform Associate. M.S. Computer Science."
+  keywords:
+    - platform engineer
+    - kubernetes
+    - AWS EKS
+    - infrastructure as code
+    - terraform
+    - ArgoCD
+    - GitOps
+    - DevOps
+    - cloud infrastructure
+    - site reliability engineering
 
   socialIcons:
     - name: linkedin
@@ -28,6 +39,7 @@ params:
 
   assets:
     favicon: "/favicon.ico"
+    theme_color: "#0d0b14"
 
 menu:
   main:
