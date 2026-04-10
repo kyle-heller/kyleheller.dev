@@ -3,11 +3,18 @@
 
   <!-- Hero -->
   <section class="hero">
-    <h1>Kyle Heller</h1>
-    <p class="hero-subtitle">Platform Engineer — Kubernetes, AWS, Infrastructure as Code</p>
-    <p class="hero-location">Columbus, OH</p>
-    <div class="hero-social">
-      {{- partial "social_icons.html" (dict "align" "") }}
+    <div class="hero-inner">
+      <div class="hero-portrait">
+        <img src="/portrait.jpg" alt="Kyle Heller" width="200" height="204" />
+      </div>
+      <div class="hero-text">
+        <h1>Kyle Heller</h1>
+        <p class="hero-subtitle">Platform Engineer — Kubernetes, AWS, IaC</p>
+        <p class="hero-location">Columbus, OH</p>
+        <div class="hero-social">
+          {{- partial "social_icons.html" (dict "align" "") }}
+        </div>
+      </div>
     </div>
   </section>
 
