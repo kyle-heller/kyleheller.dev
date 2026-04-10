@@ -1,5 +1,5 @@
 ---
-title: "Kyle Heller — Kubernetes Platform Engineer"
+title: "Kyle Heller — Platform Engineer"
 layout: "home"
-description: "Kubernetes Platform Engineer building production cloud native platforms on AWS EKS. CNCF Kubestronaut, AWS Solutions Architect, M.S. Computer Science."
+description: "Platform engineer building Kubernetes platforms on AWS EKS. CKA, Azure Solutions Architect Expert, Terraform Associate. M.S. Computer Science."
 ---
