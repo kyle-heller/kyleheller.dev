@@ -33,19 +33,18 @@
     document.body.style.overflow = '';
   }
 
-  // Intercept Blog nav link
-  document.querySelectorAll('#menu a').forEach(function (link) {
-    if (link.getAttribute('href') === '#blog') {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        if (drawer.classList.contains('open')) {
-          close();
-        } else {
-          open();
-        }
-      });
-    }
-  });
+  // Intercept Blog nav link (Hugo prepends baseURL to #blog)
+  var blogLink = document.querySelector('#menu a[href$="#blog"]');
+  if (blogLink) {
+    blogLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (drawer.classList.contains('open')) {
+        close();
+      } else {
+        open();
+      }
+    });
+  }
 
   closeBtn.addEventListener('click', close);
   backdrop.addEventListener('click', close);
