@@ -1,6 +1,6 @@
 ---
-title: "Certifications & Education"
+title: "Education & Certifications"
 layout: "certifications"
 url: /certifications/
-description: "CKA, KCSA, Azure Solutions Architect Expert, Terraform Associate, and M.S. Computer Science from CU Boulder."
+description: "M.S. Computer Science from CU Boulder. CKA, KCSA, Azure Solutions Architect Expert, Terraform Associate."
 ---
