@@ -2,5 +2,5 @@
 title: "Projects"
 layout: "projects"
 url: /projects/
-summary: "Open-source projects I've built."
+description: "Open-source projects: Kubernetes platform blueprint, SLO-driven uptime monitoring, OPA Gatekeeper contributions, and more."
 ---

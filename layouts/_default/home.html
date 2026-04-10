@@ -9,24 +9,28 @@
     <div class="hero-social">
       {{- partial "social_icons.html" (dict "align" "") }}
     </div>
+    <div class="hero-resume">
+      <a href="/KyleHeller-Resume.pdf" class="resume-btn" target="_blank">Download Resume</a>
+    </div>
   </section>
 
   <!-- Summary -->
   <section class="summary-section">
-    <p>
-      Platform engineer with 8+ years in enterprise cloud environments, currently operating production
-      Kubernetes on AWS EKS at a Fortune 75 financial services company. Background spanning platform
-      operations, infrastructure automation, and technical leadership across multi-tenant cloud environments.
+    <p class="summary-lead">
+      I build and operate production Kubernetes platforms on AWS EKS at a Fortune 75 financial services company.
     </p>
     <p>
-      Hands-on with Kubernetes cluster operations, Helm, ArgoCD, Cilium, observability
-      (Prometheus/Grafana), policy enforcement (OPA/Gatekeeper), and container security in regulated
-      environments. Built internal tooling, automation pipelines, and self-service workflows using Python,
-      API integrations, and workflow orchestration.
+      8+ years across platform engineering, infrastructure automation, and technical leadership.
+      Currently focused on cluster operations, GitOps delivery with ArgoCD, policy enforcement
+      with OPA/Gatekeeper, and observability with Prometheus — all in a regulated environment.
     </p>
     <p>
-      Certified Kubernetes Administrator, CNCF Kubestronaut, AWS Solutions Architect, Azure Solutions
-      Architect Expert, and HashiCorp Terraform Associate. M.S. Computer Science from CU Boulder.
+      Previously a Technical Lead at Veeam Software, where I led an engineering team,
+      built internal automation, and served as the senior escalation point across multi-tenant
+      cloud infrastructure.
+    </p>
+    <p class="summary-credentials">
+      CNCF Kubestronaut &middot; AWS Solutions Architect &middot; Azure Solutions Architect Expert &middot; Terraform Associate &middot; M.S. Computer Science, CU Boulder
     </p>
   </section>
 
@@ -36,29 +40,57 @@
     <div class="skills-grid">
       <div class="skill-category">
         <h3>Cloud & Infrastructure</h3>
-        <p>AWS (EKS, EC2, IAM, S3, VPC, CloudWatch, RDS), Azure (AKS, Virtual Networks, Entra ID, Key Vault), Kubernetes, Docker, Terraform, Linux (RHEL, Ubuntu)</p>
+        <div class="skill-items">
+          <span>AWS</span><span>EKS</span><span>Azure</span><span>AKS</span><span>Kubernetes</span><span>Docker</span><span>Terraform</span><span>Linux</span>
+        </div>
       </div>
       <div class="skill-category">
         <h3>Platform & Orchestration</h3>
-        <p>Helm, Kustomize, ArgoCD, Cilium (CNI/network policy), Gateway API, Pod Security Standards, OPA/Gatekeeper, Veeam Kasten, namespace isolation, resource quotas</p>
+        <div class="skill-items">
+          <span>Helm</span><span>Kustomize</span><span>ArgoCD</span><span>Cilium</span><span>Gateway API</span><span>OPA/Gatekeeper</span><span>Kasten K10</span>
+        </div>
       </div>
       <div class="skill-category">
         <h3>CI/CD & Automation</h3>
-        <p>GitHub Actions, Azure DevOps, ArgoCD (GitOps), Flux, Trivy, container image lifecycle, n8n</p>
+        <div class="skill-items">
+          <span>GitHub Actions</span><span>Azure DevOps</span><span>GitOps</span><span>Flux</span><span>Trivy</span>
+        </div>
       </div>
       <div class="skill-category">
         <h3>Development</h3>
-        <p>Python, Go, Bash, FastAPI, REST APIs, Rego (OPA), SQL, Java/Spring, C#/.NET</p>
+        <div class="skill-items">
+          <span>Python</span><span>Go</span><span>Bash</span><span>FastAPI</span><span>Rego</span><span>SQL</span><span>Java/Spring</span><span>C#/.NET</span>
+        </div>
       </div>
       <div class="skill-category">
         <h3>Observability</h3>
-        <p>Prometheus, Grafana, OpenTelemetry, ELK/EFK, CloudWatch, SLO/SLI frameworks, alerting design</p>
+        <div class="skill-items">
+          <span>Prometheus</span><span>Grafana</span><span>OpenTelemetry</span><span>ELK/EFK</span><span>CloudWatch</span><span>SLO/SLI</span>
+        </div>
       </div>
       <div class="skill-category">
         <h3>Security & Governance</h3>
-        <p>IAM/RBAC, OPA/Gatekeeper (custom Rego), Pod Security Admission, Falco, secrets management, default-deny network policies, container image scanning</p>
+        <div class="skill-items">
+          <span>IAM/RBAC</span><span>OPA/Gatekeeper</span><span>Pod Security</span><span>Falco</span><span>Network Policies</span><span>Image Scanning</span>
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- CTAs -->
+  <section class="home-cta">
+    <a href="/experience/" class="cta-card">
+      <h3>Experience</h3>
+      <p>Nationwide, Veeam Software — 8+ years in platform engineering and cloud infrastructure</p>
+    </a>
+    <a href="/projects/" class="cta-card">
+      <h3>Projects</h3>
+      <p>Platform Starter Kit, UpDog Monitor, OPA Gatekeeper Library, and more</p>
+    </a>
+    <a href="/certifications/" class="cta-card">
+      <h3>Certifications</h3>
+      <p>Kubestronaut, AWS SAA, Azure Expert, Terraform Associate — 16 certifications</p>
+    </a>
   </section>
 
 </div>

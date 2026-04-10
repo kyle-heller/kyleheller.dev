@@ -2,5 +2,5 @@
 title: "Experience"
 layout: "experience"
 url: /experience/
-summary: "Professional experience in platform engineering and cloud infrastructure."
+description: "8+ years in platform engineering and cloud infrastructure — Nationwide (AWS EKS) and Veeam Software."
 ---

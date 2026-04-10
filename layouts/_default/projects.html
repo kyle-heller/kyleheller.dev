@@ -15,10 +15,10 @@
         </div>
         <p class="project-stack">Terraform + Kubernetes + ArgoCD + OPA Gatekeeper + Veeam Kasten</p>
         <ul class="project-details">
-          <li>Terraform modules provisioning AKS clusters with configurable node pools, networking, RBAC, and remote state on Azure Storage; separate dev/prod environment configurations. Kasten storage module provisions Azure Blob backend with managed identity RBAC for K10 exports.</li>
-          <li>Veeam Kasten integration: K10 backup policy with daily snapshots, 7/4/3 GFS retention, and automated export to Azure Blob via managed identity; VolumeSnapshotClass with CSI annotation; OPA/Gatekeeper policy requiring StatefulSets to carry a <code>k10.kasten.io/backup</code> label, enforcing backup governance at the admission layer.</li>
-          <li>ArgoCD GitOps delivery with automated sync, self-heal for drift detection, and prune for removed resources; Application manifests managing Kasten infrastructure and application deployments from Git as source of truth.</li>
-          <li>Pod Security Standards (restricted profile), default-deny NetworkPolicies, Gateway API routing, Kustomize-based team onboarding with namespace isolation, resource quotas, RBAC bindings, and LimitRanges. Architecture decisions documented via ADRs.</li>
+          <li>Terraform modules provisioning AKS clusters with configurable node pools, networking, RBAC, and remote state on Azure Storage; separate dev/prod environment configurations.</li>
+          <li>Veeam Kasten K10 backup policy with daily snapshots, 7/4/3 GFS retention, and automated export to Azure Blob via managed identity. OPA/Gatekeeper policy requiring StatefulSets to carry a <code>k10.kasten.io/backup</code> label, enforcing backup governance at the admission layer.</li>
+          <li>ArgoCD GitOps delivery with automated sync, self-heal for drift detection, and prune for removed resources. Application manifests managing Kasten infrastructure and app deployments from Git as source of truth.</li>
+          <li>Pod Security Standards (restricted profile), default-deny NetworkPolicies, Gateway API routing, Kustomize-based team onboarding with namespace isolation, resource quotas, RBAC bindings, and LimitRanges.</li>
         </ul>
         <div class="project-tags">
           <span>Terraform</span>
@@ -40,9 +40,9 @@
         </div>
         <p class="project-stack">FastAPI + Prometheus + Grafana + React/TypeScript</p>
         <ul class="project-details">
-          <li>Full-stack uptime monitoring service: FastAPI backend with PostgreSQL (Alembic migrations), React/TypeScript frontend, and background worker performing health checks. SLO engine computing availability (99.5% target) and latency (p95 &lt; 500ms) with error budget burn rate tracking over a rolling 30-day window.</li>
-          <li>Prometheus instrumentation with custom histograms, counters, and gauges; Grafana dashboards provisioned via JSON. Alerting rules for SLO breaches, error budget burn rate, and endpoint downtime using <code>histogram_quantile</code> and <code>rate</code> queries.</li>
-          <li>CI/CD via GitHub Actions: lint, test, build, push to GHCR, and Trivy container image scanning on CRITICAL/HIGH vulnerabilities. Kubernetes manifests with Kustomization for cluster deployment.</li>
+          <li>Full-stack uptime monitoring: FastAPI backend with PostgreSQL, React/TypeScript frontend, and background worker performing health checks. SLO engine computing availability (99.5% target) and latency (p95 &lt; 500ms) with error budget burn rate tracking.</li>
+          <li>Prometheus instrumentation with custom histograms, counters, and gauges; Grafana dashboards provisioned via JSON. Alerting rules for SLO breaches and burn rate using <code>histogram_quantile</code> and <code>rate</code> queries.</li>
+          <li>CI/CD via GitHub Actions: lint, test, build, push to GHCR, and Trivy container image scanning. Kubernetes manifests with Kustomization for cluster deployment.</li>
         </ul>
         <div class="project-tags">
           <span>FastAPI</span>
@@ -76,7 +76,31 @@
         </div>
       </div>
 
-      <div class="project-card">
+    </div>
+
+    <h2 class="other-projects-heading">Other Projects</h2>
+    <div class="projects-list">
+
+      <div class="project-card project-card-secondary">
+        <div class="project-header">
+          <h2>CKS Prep</h2>
+          <div class="project-links">
+            <a href="https://github.com/kyle-heller/CKS-PREP-2025" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <p class="project-stack">Kubernetes Security — Bash + YAML</p>
+        <ul class="project-details">
+          <li>55 hands-on CKS practice questions with automated lab setup, verification scripts, and solve scripts for KillerCoda/kubeadm clusters.</li>
+        </ul>
+        <div class="project-tags">
+          <span>Kubernetes</span>
+          <span>Security</span>
+          <span>CKS</span>
+          <span>Bash</span>
+        </div>
+      </div>
+
+      <div class="project-card project-card-secondary">
         <div class="project-header">
           <h2>Roll Call</h2>
           <div class="project-links">
@@ -86,12 +110,11 @@
         </div>
         <p class="project-stack">Full-Stack Web Application</p>
         <ul class="project-details">
-          <li>Community web app for organizing and discovering tabletop gaming events. Full-stack project with user authentication, event management, and group discovery.</li>
+          <li>Community web app for organizing and discovering tabletop gaming events. User authentication, event management, and group discovery.</li>
         </ul>
         <div class="project-tags">
           <span>Full-Stack</span>
           <span>Authentication</span>
-          <span>Event Management</span>
         </div>
       </div>
 

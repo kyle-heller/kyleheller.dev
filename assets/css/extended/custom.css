@@ -3,7 +3,7 @@
    ======================================== */
 .hero {
   text-align: center;
-  padding: 3rem 0 1.5rem;
+  padding: 3rem 0 1rem;
 }
 
 .hero h1 {
@@ -22,12 +22,33 @@
 .hero-location {
   font-size: 0.95rem;
   color: var(--secondary);
-  margin: 0.2rem 0 1rem;
+  margin: 0.2rem 0 0.8rem;
   opacity: 0.7;
 }
 
 .hero-social .social-icons {
   justify-content: center;
+}
+
+.hero-resume {
+  margin-top: 1rem;
+}
+
+.resume-btn {
+  display: inline-block;
+  padding: 0.5rem 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.resume-btn:hover {
+  border-color: var(--primary);
+  background: var(--code-bg);
 }
 
 /* ========================================
@@ -39,18 +60,31 @@
   padding: 0 var(--gap);
 }
 
+.summary-lead {
+  font-size: 1.15rem !important;
+  color: var(--primary) !important;
+  font-weight: 500;
+  line-height: 1.6 !important;
+}
+
 .summary-section p {
-  font-size: 1.02rem;
+  font-size: 1rem;
   line-height: 1.75;
   color: var(--secondary);
   margin-bottom: 0.8rem;
 }
 
+.summary-credentials {
+  font-size: 0.9rem !important;
+  opacity: 0.7;
+  margin-top: 1.2rem !important;
+}
+
 /* ========================================
-   Skills grid
+   Skills grid — tag-based layout
    ======================================== */
 .skills-section {
-  margin: 0 auto 2rem;
+  margin: 0 auto 2.5rem;
   padding: 0 var(--gap);
 }
 
@@ -63,31 +97,77 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 0.8rem;
 }
 
 .skill-category {
   background: var(--code-bg);
   border-radius: 6px;
-  padding: 1rem 1.2rem;
+  padding: 0.9rem 1.1rem;
   border-left: 3px solid var(--secondary);
 }
 
 .skill-category h3 {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--secondary);
-  margin: 0 0 0.4rem 0;
+  margin: 0 0 0.5rem 0;
   font-weight: 600;
 }
 
-.skill-category p {
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.5;
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.skill-items span {
+  background: var(--tertiary);
   color: var(--primary);
+  padding: 0.15rem 0.55rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* ========================================
+   Home CTAs
+   ======================================== */
+.home-cta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.8rem;
+  padding: 0 var(--gap);
+  margin-bottom: 2rem;
+}
+
+.cta-card {
+  display: block;
+  background: var(--code-bg);
+  border-radius: 6px;
+  padding: 1.2rem 1.4rem;
+  text-decoration: none;
+  color: var(--primary);
+  border: 1px solid var(--border);
+  transition: border-color 0.15s;
+}
+
+.cta-card:hover {
+  border-color: var(--primary);
+}
+
+.cta-card h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
+}
+
+.cta-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--secondary);
+  line-height: 1.5;
 }
 
 /* ========================================
@@ -167,6 +247,14 @@
   border-left: 3px solid var(--secondary);
 }
 
+.project-card-secondary {
+  border-left-color: var(--border);
+}
+
+.other-projects-heading {
+  margin-top: 3rem !important;
+}
+
 .project-header {
   display: flex;
   justify-content: space-between;
@@ -183,7 +271,7 @@
 
 .project-links {
   display: flex;
-  gap: 1rem;
+  gap: 0.6rem;
 }
 
 .project-links a {
@@ -229,14 +317,14 @@
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.35rem;
 }
 
 .project-tags span {
   background: var(--tertiary);
   color: var(--primary);
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
+  padding: 0.15rem 0.55rem;
+  border-radius: 3px;
   font-size: 0.75rem;
   font-weight: 500;
 }
@@ -260,6 +348,14 @@
 
 .cert-item:last-child {
   border-bottom: none;
+}
+
+.cert-highlight {
+  background: var(--code-bg);
+  border-radius: 6px;
+  padding: 0.9rem 1rem;
+  border-bottom: none;
+  border-left: 3px solid var(--secondary);
 }
 
 .cert-year {
@@ -288,7 +384,7 @@
   margin-top: 0.1rem;
 }
 
-/* Section headings on certifications page */
+/* Section headings on inner pages */
 .entry-content h2 {
   font-size: 1.2rem;
   margin: 2rem 0 0.5rem;
