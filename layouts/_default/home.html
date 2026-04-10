@@ -1,0 +1,45 @@
+{{ define "main" }}
+<div class="home-content">
+  <!-- Bio section (handled by PaperMod homeInfoParams) -->
+  {{- if .Site.Params.homeInfoParams }}
+  <article class="first-entry home-info">
+    <header class="entry-header">
+      <h1>{{ .Site.Params.homeInfoParams.Title }}</h1>
+    </header>
+    <div class="entry-content">
+      {{ .Site.Params.homeInfoParams.Content | markdownify }}
+    </div>
+    <footer class="entry-footer">
+      {{- partial "social_icons.html" (dict "align" "") }}
+    </footer>
+  </article>
+  {{- end }}
+
+  <!-- Skills section -->
+  <div class="skills-section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>Cloud & Platform</h3>
+        <p>AWS · EKS · Kubernetes · Terraform · ArgoCD · Helm</p>
+      </div>
+      <div class="skill-category">
+        <h3>Observability & Policy</h3>
+        <p>Prometheus · Grafana · OPA Gatekeeper · Cilium</p>
+      </div>
+      <div class="skill-category">
+        <h3>Automation</h3>
+        <p>Python · Bash · GitHub Actions</p>
+      </div>
+      <div class="skill-category">
+        <h3>Core Dev</h3>
+        <p>Python · Java/Spring · C#/.NET · SQL</p>
+      </div>
+      <div class="skill-category">
+        <h3>Infrastructure</h3>
+        <p>Azure (AZ-104, AZ-305, AZ-400) · Docker · CI/CD Pipelines</p>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

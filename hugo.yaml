@@ -1,0 +1,72 @@
+baseURL: "https://www.kyleheller.dev/"
+languageCode: en-us
+title: Kyle Heller
+theme: PaperMod
+paginate: 10
+
+params:
+  env: production
+  defaultTheme: dark
+  disableThemeToggle: false
+  showReadingTime: true
+  showShareButtons: false
+  showPostNavLinks: true
+  showBreadCrumbs: true
+  showCodeCopyButtons: true
+  showToc: true
+
+  homeInfoParams:
+    Title: "Kyle Heller"
+    Content: >
+      **Kubernetes Platform Engineer** · Columbus, OH
+
+
+      I'm a Kubernetes Platform Engineer at Nationwide, building and operating production-grade
+      cloud native platforms on AWS EKS — infrastructure-as-code with Terraform, GitOps delivery
+      with ArgoCD, policy enforcement with OPA Gatekeeper, and observability with Prometheus.
+      Before this, I spent seven years as a Technical Lead at Veeam Software. I've seen a lot
+      of what breaks. I hold an M.S. in Computer Science from the University of Colorado Boulder,
+      with graduate certificates in Data Science and AI.
+
+  socialIcons:
+    - name: linkedin
+      url: "https://www.linkedin.com/in/-kyle-heller/"
+    - name: github
+      url: "https://github.com/kyle-heller"
+    - name: twitter
+      url: "https://twitter.com/KyleHellerDev"
+    - name: rss
+      url: "https://blog.kyleheller.dev/feed.xml"
+
+  assets:
+    favicon: "/favicon.ico"
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: blog
+      name: Blog
+      url: https://blog.kyleheller.dev/
+      weight: 20
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 30
+    - identifier: certifications
+      name: Certifications
+      url: /certifications/
+      weight: 40
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

@@ -1,0 +1,68 @@
+{{ define "main" }}
+<article>
+  <header class="entry-header">
+    <h1>{{ .Title }}</h1>
+  </header>
+  <div class="entry-content">
+    <div class="projects-list">
+
+      <div class="project-card">
+        <h2>Platform-Starter-Kit</h2>
+        <p>
+          A production-ready Kubernetes platform blueprint deploying AKS with Terraform,
+          ArgoCD for GitOps delivery, OPA Gatekeeper for policy enforcement, cert-manager
+          for TLS automation, and Kasten K10 for backup and disaster recovery. Designed
+          as a reference architecture for platform engineering teams.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/kyle-heller/Platform-Starter-Kit" target="_blank" rel="noopener">GitHub →</a>
+        </div>
+        <div class="project-tags">
+          <span>Terraform</span>
+          <span>Kubernetes</span>
+          <span>ArgoCD</span>
+          <span>OPA Gatekeeper</span>
+          <span>Helm</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h2>UpDog Monitor</h2>
+        <p>
+          An SLO-driven uptime monitoring platform built with FastAPI, Prometheus, and a
+          React/TypeScript frontend. Features burn-rate alerting, SLO target tracking, and
+          a clean dashboard for service health visibility.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/kyle-heller/UpDog-Monitor" target="_blank" rel="noopener">GitHub →</a>
+        </div>
+        <div class="project-tags">
+          <span>FastAPI</span>
+          <span>React</span>
+          <span>Prometheus</span>
+          <span>Docker</span>
+          <span>SLO</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h2>Roll Call</h2>
+        <p>
+          A community web app for organizing and discovering tabletop gaming events.
+          Full-stack project with user authentication, event management, and group discovery.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/kyle-heller/roll-call" target="_blank" rel="noopener">GitHub →</a>
+          <a href="https://rollcall.site" target="_blank" rel="noopener">Live Site →</a>
+        </div>
+        <div class="project-tags">
+          <span>Full-Stack</span>
+          <span>Authentication</span>
+          <span>Event Management</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>
+{{ end }}
