@@ -593,6 +593,17 @@
 }
 
 /* ========================================
+   Blog nav indicator
+   ======================================== */
+#menu a[href$="#blog"]::after {
+  content: '\25B8';
+  margin-left: 0.3em;
+  font-size: 0.7em;
+  vertical-align: middle;
+  opacity: 0.6;
+}
+
+/* ========================================
    Blog slide-over drawer
    ======================================== */
 .blog-backdrop {
